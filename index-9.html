@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>État Haïtien — Programme d'assistance</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:#f4f7fa;color:#17212b}
+header{background:#07345a;color:white;padding:18px 6%;display:flex;justify-content:space-between;align-items:center}
+.logo{font-size:22px;font-weight:800}nav a{color:white;text-decoration:none;margin-left:18px}
+.hero{background:linear-gradient(135deg,#06345a,#08747a);color:white;text-align:center;padding:70px 20px}
+.hero h1{font-size:44px;margin:0 0 12px}.hero p{font-size:18px;max-width:700px;margin:10px auto 25px}
+.amount{font-size:46px;font-weight:800}.btn{display:inline-block;background:#f4c542;color:#12263a;padding:14px 25px;border-radius:28px;text-decoration:none;font-weight:bold;margin-top:15px}
+.notice{background:#fff3cd;color:#604c00;padding:13px;text-align:center;font-weight:bold}
+main{max-width:1050px;margin:auto;padding:45px 20px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:white;padding:25px;border-radius:16px;box-shadow:0 8px 25px #0001}.card h2{color:#07557a}
+.form{max-width:650px;margin:35px auto;background:white;padding:28px;border-radius:18px;box-shadow:0 8px 25px #0001}
+label{display:block;margin-top:15px;font-weight:bold}input{width:100%;padding:12px;margin-top:6px;border:1px solid #ccd5dc;border-radius:9px}
+button{margin-top:20px;width:100%;padding:13px;border:0;border-radius:25px;background:#07557a;color:white;font-weight:bold}
+footer{background:#07345a;color:white;text-align:center;padding:28px;margin-top:40px}
+@media(max-width:750px){header{display:block}nav{margin-top:12px}nav a{margin-right:12px;margin-left:0}.grid{grid-template-columns:1fr}.hero h1{font-size:34px}}
+</style>
+</head>
+<body>
+<header>
+<div class="logo">🇭🇹 ÉTAT HAÏTIEN</div>
+<nav><a href="#accueil">Accueil</a><a href="#notre-initiative">Initiative</a><a href="#programme">Programme</a><a href="#securite">Sécurité</a><a href="#inscription">Inscription</a></nav>
+</header>
+
+<div class="notice">⚠️ Organisation privée — Ce site n'est pas le Gouvernement de la République d'Haïti.</div>
+
+<section class="hero" id="accueil">
+<h1>Programme d'assistance</h1>
+<p>Un projet privé destiné à soutenir des personnes sans emploi pendant la saison des pluies en Haïti.</p>
+<div class="amount">25 000 HTG</div>
+<p>Montant annoncé dans le cadre du projet • 400 places prévues</p>
+<a class="btn" href="#inscription">Voir l'inscription</a>
+</section>
+
+<main>
+
+<section id="notre-initiative" style="padding:45px 20px;max-width:1050px;margin:auto">
+  <div class="card">
+    <h2>Notre initiative 🇭🇹</h2>
+    <p>Face aux difficultés rencontrées par de nombreuses personnes sans emploi pendant la saison des pluies, notre organisation privée « État Haïtien » souhaite mettre en place une initiative de soutien destinée à des personnes vivant en Haïti.</p>
+    <p>Le projet prévoit un maximum de <strong>400 bénéficiaires</strong>, avec une aide annoncée de <strong>25 000 gourdes</strong> par bénéficiaire, sous réserve de la validation des conditions du programme.</p>
+    <p>Une procédure de vérification de l’identité et du numéro de téléphone est prévue afin d’éviter les inscriptions multiples et de protéger les participants.</p>
+    <div style="background:#fff3cd;padding:15px;border-radius:10px;margin-top:18px">
+      <strong>Important :</strong> « État Haïtien » est le nom de notre organisation privée et <strong>ne représente pas le Gouvernement de la République d’Haïti</strong>.
+    </div>
+  </div>
+</section>
+
+<section id="programme">
+<div class="grid">
+<div class="card"><h2>👥 400 personnes</h2><p>Le projet prévoit un maximum de 400 bénéficiaires, sous réserve des critères et de la validation de l'organisation.</p></div>
+<div class="card"><h2>💰 25 000 HTG</h2><p>Montant d'assistance présenté par l'organisation dans le cadre de ce projet privé.</p></div>
+<div class="card" id="securite"><h2>🔐 Vérification</h2><p>Une procédure de vérification peut être utilisée pour éviter les inscriptions multiples et protéger les informations des participants.</p></div>
+</div>
+</section>
+
+<section id="inscription">
+<div class="form">
+<h2>Demande de participation</h2>
+<p>Cette maquette ne traite aucun paiement et ne garantit aucun versement. Les informations doivent être vérifiées avant toute validation.</p>
+<form onsubmit="event.preventDefault(); alert('Demande enregistrée pour démonstration.');">
+<label>Nom complet</label><input required placeholder="Votre nom complet">
+<label>Téléphone</label><input required type="tel" placeholder="+509 ...">
+<label>Code de vérification</label><input required maxlength="6" placeholder="Code OTP">
+<button type="submit">Soumettre la demande</button>
+</form>
+</div>
+</section>
+
+<section>
+<div class="card">
+<h2>Protection des participants</h2>
+<ul>
+<li>Une seule demande par personne.</li>
+<li>Vérification du numéro de téléphone.</li>
+<li>Les données sensibles ne doivent pas être publiées.</li>
+<li>Aucun paiement n'est demandé par cette maquette.</li>
+</ul>
+</div>
+</section>
+</main>
+
+<footer>© 2026 État Haïtien — Organisation privée • Maquette</footer>
+</body>
+</html>
