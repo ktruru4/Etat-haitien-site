@@ -3,85 +3,125 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Informations et formulaire de contact de notre initiative privée d'entraide en Haïti.">
-  <title>État Haïtien — Initiative privée d'entraide</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#123c2d">
+  <meta name="description" content="Site officiel de contact d'une initiative privée d'entraide en Haïti.">
+  <title>État Haïtien | Initiative privée</title>
 
   <style>
+    :root {
+      --green: #123c2d;
+      --green2: #176642;
+      --light: #f3f6f5;
+      --text: #243047;
+      --border: #dce4df;
+    }
+
     * { box-sizing: border-box; }
 
     body {
       margin: 0;
+      background: var(--light);
+      color: var(--text);
       font-family: Arial, sans-serif;
-      background: #f3f6fa;
-      color: #243047;
-      line-height: 1.6;
+      line-height: 1.65;
     }
 
     header {
-      background: #123c2d;
+      background: var(--green);
       color: white;
-      padding: 22px 16px;
+      padding: 26px 16px;
       text-align: center;
     }
 
-    header h1 { margin: 0; font-size: 27px; }
-    header p { margin: 6px 0 0; }
+    header h1 { margin: 0; font-size: 28px; }
+    header p { margin: 5px 0 0; }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      background: #fff;
+      padding: 13px;
+    }
+
+    nav a {
+      color: var(--green);
+      text-decoration: none;
+      font-weight: bold;
+    }
 
     .notice {
-      background: #fff3cd;
-      color: #664d03;
-      padding: 13px 16px;
+      background: #fff0c2;
+      color: #654d00;
       text-align: center;
+      padding: 13px 16px;
       font-size: 14px;
     }
 
     main {
-      max-width: 780px;
+      width: min(850px, 100%);
       margin: 28px auto;
       padding: 0 16px;
     }
 
+    .hero {
+      background: var(--green);
+      color: white;
+      padding: 32px 25px;
+      border-radius: 16px;
+      margin-bottom: 20px;
+    }
+
+    .hero h2 { font-size: 30px; margin: 0 0 10px; }
+    .hero p { margin-bottom: 0; }
+
     .card {
       background: white;
+      border: 1px solid var(--border);
       border-radius: 14px;
       padding: 24px;
       margin-bottom: 20px;
-      box-shadow: 0 4px 18px rgba(0,0,0,.06);
+      box-shadow: 0 4px 14px rgba(0,0,0,.035);
     }
 
-    h2 { color: #123c2d; margin-top: 0; }
+    h2, h3 { color: var(--green); }
+    .hero h2 { color: white; }
 
-    .info {
+    .stats {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
       gap: 12px;
+      margin-top: 18px;
     }
 
-    .info div {
-      background: #eef5f0;
-      padding: 15px;
+    .stat {
+      padding: 16px;
+      background: #edf5ef;
       border-radius: 10px;
     }
 
+    .stat strong { display: block; color: var(--green); }
+
     label {
       display: block;
-      font-weight: bold;
       margin: 15px 0 6px;
+      font-weight: bold;
     }
 
     input, select, textarea {
       width: 100%;
       padding: 12px;
-      border: 1px solid #cbd5e1;
+      border: 1px solid #bdc9c1;
       border-radius: 8px;
-      font: inherit;
       background: white;
+      font: inherit;
     }
 
     input:focus, select:focus, textarea:focus {
-      outline: 2px solid #287a54;
-      border-color: transparent;
+      outline: 2px solid var(--green2);
+      outline-offset: 1px;
     }
 
     .consent {
@@ -89,89 +129,111 @@
       gap: 10px;
       align-items: flex-start;
       margin: 18px 0;
-      font-size: 14px;
     }
 
     .consent input {
       width: auto;
-      margin-top: 5px;
+      margin-top: 7px;
+    }
+
+    .consent label {
+      margin: 0;
+      font-weight: normal;
     }
 
     button {
       width: 100%;
-      padding: 14px;
-      background: #176642;
-      color: white;
       border: 0;
-      border-radius: 9px;
+      border-radius: 8px;
+      padding: 14px;
+      background: var(--green2);
+      color: white;
       font-size: 16px;
       font-weight: bold;
       cursor: pointer;
     }
 
-    button:hover { background: #104b30; }
+    button:hover { background: var(--green); }
 
     .small {
-      color: #586579;
-      font-size: 14px;
+      font-size: 13px;
+      color: #59665e;
     }
 
     footer {
-      text-align: center;
-      padding: 24px 16px;
-      background: #123c2d;
+      background: var(--green);
       color: white;
+      padding: 24px 16px;
+      text-align: center;
       font-size: 13px;
     }
+
+    footer p { margin: 5px 0; }
   </style>
 </head>
 
 <body>
   <header>
-    <h1>🇭🇹 État Haïtien</h1>
+    <h1>🇭🇹 ÉTAT HAÏTIEN</h1>
     <p>Initiative privée d'entraide</p>
   </header>
 
+  <nav aria-label="Navigation principale">
+    <a href="#accueil">Accueil</a>
+    <a href="#programme">Programme</a>
+    <a href="#inscription">Inscription</a>
+    <a href="#securite">Sécurité</a>
+  </nav>
+
   <div class="notice">
-    Information importante : cette initiative est privée et n'est
-    pas le Gouvernement de la République d'Haïti.
+    ⚠️ Organisation privée indépendante. Ce site n'est pas le
+    Gouvernement de la République d'Haïti.
   </div>
 
   <main>
-    <section class="card">
-      <h2>Bienvenue</h2>
+    <section class="hero" id="accueil">
+      <h2>Bienvenue sur notre site</h2>
       <p>
-        Notre organisation souhaite recueillir les demandes des personnes
-        intéressées par une initiative privée d'entraide en Haïti.
+        Notre initiative privée vise à recueillir et examiner les
+        demandes de personnes souhaitant obtenir des informations
+        sur un programme d'entraide en Haïti.
       </p>
-      <p>
-        Le dépôt d'une demande ne garantit pas l'obtention d'une aide.
-        Toute aide éventuelle dépendra des ressources disponibles et
-        des critères annoncés par l'organisation.
-      </p>
-
-      <div class="info">
-        <div>
-          <strong>Notre mission</strong><br>
-          Écouter et examiner les demandes.
-        </div>
-        <div>
-          <strong>Confidentialité</strong><br>
-          Limiter les informations collectées au nécessaire.
-        </div>
-        <div>
-          <strong>Aucun frais</strong><br>
-          Ne payez pas pour soumettre une demande.
-        </div>
-      </div>
     </section>
 
-    <section class="card">
-      <h2>Formulaire de demande</h2>
+    <section class="card" id="programme">
+      <h2>Notre initiative</h2>
+      <p>
+        Nous souhaitons étudier les demandes selon les ressources
+        réellement disponibles et des critères clairement communiqués.
+        Envoyer une demande ne garantit pas l'obtention d'une aide.
+      </p>
+
+      <div class="stats">
+        <div class="stat">
+          <strong>Inscription</strong>
+          Gratuite
+        </div>
+        <div class="stat">
+          <strong>Vérification</strong>
+          Examen des demandes
+        </div>
+        <div class="stat">
+          <strong>Contact</strong>
+          Par e-mail ou téléphone
+        </div>
+      </div>
+
       <p class="small">
-        Remplissez les champs ci-dessous. Les informations seront
-        transmises à l'adresse e-mail de l'organisation après
-        activation du service de formulaire.
+        Toute somme d'aide éventuelle doit être confirmée par écrit,
+        avec ses critères et ses modalités, avant toute décision.
+      </p>
+    </section>
+
+    <section class="card" id="inscription">
+      <h2>Formulaire d'inscription</h2>
+      <p>
+        Remplissez les informations nécessaires pour que notre
+        organisation puisse examiner votre demande.
       </p>
 
       <form
@@ -191,27 +253,27 @@
           autocomplete="tel" maxlength="25" required>
 
         <label for="commune">Commune de résidence</label>
-        <input id="commune" name="Commune" type="text"
-          maxlength="100" required>
+        <input id="commune" name="Commune de résidence"
+          type="text" maxlength="100" required>
 
-        <label for="motif">Motif de la demande</label>
-        <select id="motif" name="Motif de la demande" required>
-          <option value="">Choisissez une option</option>
-          <option>Demande d'information</option>
-          <option>Demande d'assistance</option>
-          <option>Proposition de partenariat</option>
-          <option>Autre</option>
+        <label for="motif">Objet de la demande</label>
+        <select id="motif" name="Objet de la demande" required>
+          <option value="">Sélectionnez une option</option>
+          <option value="Information">Demande d'information</option>
+          <option value="Assistance">Demande d'assistance</option>
+          <option value="Partenariat">Proposition de partenariat</option>
+          <option value="Autre">Autre</option>
         </select>
 
-        <label for="message">Message complémentaire (facultatif)</label>
+        <label for="message">Message complémentaire</label>
         <textarea id="message" name="Message"
           rows="4" maxlength="1500"
-          placeholder="Expliquez brièvement votre demande."></textarea>
+          placeholder="Décrivez brièvement votre demande."></textarea>
 
         <div class="consent">
-          <input id="consentement" name="Consentement"
-            type="checkbox" value="Accepté" required>
-          <label for="consentement" style="margin:0;font-weight:normal">
+          <input id="consentement" type="checkbox"
+            name="Consentement au traitement" value="Oui" required>
+          <label for="consentement">
             J'accepte que les informations fournies soient utilisées
             pour traiter ma demande et que l'organisation me contacte.
           </label>
@@ -221,29 +283,35 @@
       </form>
 
       <p class="small">
-        N'indiquez pas de mot de passe, de coordonnées bancaires
-        ou de documents d'identité dans ce formulaire.
+        L'envoi sera opérationnel après validation de l'adresse
+        par FormSubmit. Ne saisissez pas de mot de passe, de code
+        bancaire ou de document d'identité dans ce formulaire.
       </p>
     </section>
 
-    <section class="card">
-      <h2>Transparence et sécurité</h2>
+    <section class="card" id="securite">
+      <h2>Sécurité et confidentialité</h2>
+      <ul>
+        <li>La soumission d'une demande est gratuite.</li>
+        <li>Les informations reçues doivent rester confidentielles.</li>
+        <li>Une demande doit être examinée avant toute décision.</li>
+        <li>Aucun code OTP n'est généré ou validé par cette page.</li>
+      </ul>
       <p>
-        Ce site est géré par une organisation privée indépendante.
-        Il ne représente aucune institution publique et ne délivre
-        aucun document officiel de l'État.
+        Si une vérification par code est mise en place ultérieurement,
+        elle devra utiliser un système sécurisé et ne jamais demander
+        à une personne de communiquer un code bancaire ou un mot de passe.
       </p>
       <p>
-        Aucun paiement n'est nécessaire pour envoyer une demande.
-        Méfiez-vous de toute personne qui réclame de l'argent pour
-        débloquer une aide promise.
+        Cette organisation est indépendante des institutions publiques.
+        Aucune aide n'est garantie par le simple fait de s'inscrire.
       </p>
     </section>
   </main>
 
   <footer>
-    © 2026 — Initiative privée d'entraide en Haïti.
-    Site indépendant, non gouvernemental.
+    <p>© 2026 — État Haïtien, initiative privée.</p>
+    <p>Site indépendant, non affilié au gouvernement.</p>
   </footer>
 </body>
 </html>
