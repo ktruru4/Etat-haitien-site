@@ -1,90 +1,249 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>État Haïtien — Programme d'assistance</title>
-<style>
-*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:#f4f7fa;color:#17212b}
-header{background:#07345a;color:white;padding:18px 6%;display:flex;justify-content:space-between;align-items:center}
-.logo{font-size:22px;font-weight:800}nav a{color:white;text-decoration:none;margin-left:18px}
-.hero{background:linear-gradient(135deg,#06345a,#08747a);color:white;text-align:center;padding:70px 20px}
-.hero h1{font-size:44px;margin:0 0 12px}.hero p{font-size:18px;max-width:700px;margin:10px auto 25px}
-.amount{font-size:46px;font-weight:800}.btn{display:inline-block;background:#f4c542;color:#12263a;padding:14px 25px;border-radius:28px;text-decoration:none;font-weight:bold;margin-top:15px}
-.notice{background:#fff3cd;color:#604c00;padding:13px;text-align:center;font-weight:bold}
-main{max-width:1050px;margin:auto;padding:45px 20px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.card{background:white;padding:25px;border-radius:16px;box-shadow:0 8px 25px #0001}.card h2{color:#07557a}
-.form{max-width:650px;margin:35px auto;background:white;padding:28px;border-radius:18px;box-shadow:0 8px 25px #0001}
-label{display:block;margin-top:15px;font-weight:bold}input{width:100%;padding:12px;margin-top:6px;border:1px solid #ccd5dc;border-radius:9px}
-button{margin-top:20px;width:100%;padding:13px;border:0;border-radius:25px;background:#07557a;color:white;font-weight:bold}
-footer{background:#07345a;color:white;text-align:center;padding:28px;margin-top:40px}
-@media(max-width:750px){header{display:block}nav{margin-top:12px}nav a{margin-right:12px;margin-left:0}.grid{grid-template-columns:1fr}.hero h1{font-size:34px}}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Informations et formulaire de contact de notre initiative privée d'entraide en Haïti.">
+  <title>État Haïtien — Initiative privée d'entraide</title>
+
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f3f6fa;
+      color: #243047;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #123c2d;
+      color: white;
+      padding: 22px 16px;
+      text-align: center;
+    }
+
+    header h1 { margin: 0; font-size: 27px; }
+    header p { margin: 6px 0 0; }
+
+    .notice {
+      background: #fff3cd;
+      color: #664d03;
+      padding: 13px 16px;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    main {
+      max-width: 780px;
+      margin: 28px auto;
+      padding: 0 16px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 14px;
+      padding: 24px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 18px rgba(0,0,0,.06);
+    }
+
+    h2 { color: #123c2d; margin-top: 0; }
+
+    .info {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 12px;
+    }
+
+    .info div {
+      background: #eef5f0;
+      padding: 15px;
+      border-radius: 10px;
+    }
+
+    label {
+      display: block;
+      font-weight: bold;
+      margin: 15px 0 6px;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #cbd5e1;
+      border-radius: 8px;
+      font: inherit;
+      background: white;
+    }
+
+    input:focus, select:focus, textarea:focus {
+      outline: 2px solid #287a54;
+      border-color: transparent;
+    }
+
+    .consent {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      margin: 18px 0;
+      font-size: 14px;
+    }
+
+    .consent input {
+      width: auto;
+      margin-top: 5px;
+    }
+
+    button {
+      width: 100%;
+      padding: 14px;
+      background: #176642;
+      color: white;
+      border: 0;
+      border-radius: 9px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover { background: #104b30; }
+
+    .small {
+      color: #586579;
+      font-size: 14px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 24px 16px;
+      background: #123c2d;
+      color: white;
+      font-size: 13px;
+    }
+  </style>
 </head>
+
 <body>
-<header>
-<div class="logo">🇭🇹 ÉTAT HAÏTIEN</div>
-<nav><a href="#accueil">Accueil</a><a href="#notre-initiative">Initiative</a><a href="#programme">Programme</a><a href="#securite">Sécurité</a><a href="#inscription">Inscription</a></nav>
-</header>
+  <header>
+    <h1>🇭🇹 État Haïtien</h1>
+    <p>Initiative privée d'entraide</p>
+  </header>
 
-<div class="notice">⚠️ Organisation privée — Ce site n'est pas le Gouvernement de la République d'Haïti.</div>
-
-<section class="hero" id="accueil">
-<h1>Programme d'assistance</h1>
-<p>Un projet privé destiné à soutenir des personnes sans emploi pendant la saison des pluies en Haïti.</p>
-<div class="amount">25 000 HTG</div>
-<p>Montant annoncé dans le cadre du projet • 400 places prévues</p>
-<a class="btn" href="#inscription">Voir l'inscription</a>
-</section>
-
-<main>
-
-<section id="notre-initiative" style="padding:45px 20px;max-width:1050px;margin:auto">
-  <div class="card">
-    <h2>Notre initiative 🇭🇹</h2>
-    <p>Face aux difficultés rencontrées par de nombreuses personnes sans emploi pendant la saison des pluies, notre organisation privée « État Haïtien » souhaite mettre en place une initiative de soutien destinée à des personnes vivant en Haïti.</p>
-    <p>Le projet prévoit un maximum de <strong>400 bénéficiaires</strong>, avec une aide annoncée de <strong>25 000 gourdes</strong> par bénéficiaire, sous réserve de la validation des conditions du programme.</p>
-    <p>Une procédure de vérification de l’identité et du numéro de téléphone est prévue afin d’éviter les inscriptions multiples et de protéger les participants.</p>
-    <div style="background:#fff3cd;padding:15px;border-radius:10px;margin-top:18px">
-      <strong>Important :</strong> « État Haïtien » est le nom de notre organisation privée et <strong>ne représente pas le Gouvernement de la République d’Haïti</strong>.
-    </div>
+  <div class="notice">
+    Information importante : cette initiative est privée et n'est
+    pas le Gouvernement de la République d'Haïti.
   </div>
-</section>
 
-<section id="programme">
-<div class="grid">
-<div class="card"><h2>👥 400 personnes</h2><p>Le projet prévoit un maximum de 400 bénéficiaires, sous réserve des critères et de la validation de l'organisation.</p></div>
-<div class="card"><h2>💰 25 000 HTG</h2><p>Montant d'assistance présenté par l'organisation dans le cadre de ce projet privé.</p></div>
-<div class="card" id="securite"><h2>🔐 Vérification</h2><p>Une procédure de vérification peut être utilisée pour éviter les inscriptions multiples et protéger les informations des participants.</p></div>
-</div>
-</section>
+  <main>
+    <section class="card">
+      <h2>Bienvenue</h2>
+      <p>
+        Notre organisation souhaite recueillir les demandes des personnes
+        intéressées par une initiative privée d'entraide en Haïti.
+      </p>
+      <p>
+        Le dépôt d'une demande ne garantit pas l'obtention d'une aide.
+        Toute aide éventuelle dépendra des ressources disponibles et
+        des critères annoncés par l'organisation.
+      </p>
 
-<section id="inscription">
-<div class="form">
-<h2>Demande de participation</h2>
-<p>Cette maquette ne traite aucun paiement et ne garantit aucun versement. Les informations doivent être vérifiées avant toute validation.</p>
-<form onsubmit="event.preventDefault(); alert('Demande enregistrée pour démonstration.');">
-<label>Nom complet</label><input required placeholder="Votre nom complet">
-<label>Téléphone</label><input required type="tel" placeholder="+509 ...">
-<label>Code de vérification</label><input required maxlength="6" placeholder="Code OTP">
-<button type="submit">Soumettre la demande</button>
-</form>
-</div>
-</section>
+      <div class="info">
+        <div>
+          <strong>Notre mission</strong><br>
+          Écouter et examiner les demandes.
+        </div>
+        <div>
+          <strong>Confidentialité</strong><br>
+          Limiter les informations collectées au nécessaire.
+        </div>
+        <div>
+          <strong>Aucun frais</strong><br>
+          Ne payez pas pour soumettre une demande.
+        </div>
+      </div>
+    </section>
 
-<section>
-<div class="card">
-<h2>Protection des participants</h2>
-<ul>
-<li>Une seule demande par personne.</li>
-<li>Vérification du numéro de téléphone.</li>
-<li>Les données sensibles ne doivent pas être publiées.</li>
-<li>Aucun paiement n'est demandé par cette maquette.</li>
-</ul>
-</div>
-</section>
-</main>
+    <section class="card">
+      <h2>Formulaire de demande</h2>
+      <p class="small">
+        Remplissez les champs ci-dessous. Les informations seront
+        transmises à l'adresse e-mail de l'organisation après
+        activation du service de formulaire.
+      </p>
 
-<footer>© 2026 État Haïtien — Organisation privée • Maquette</footer>
+      <form
+        action="https://formsubmit.co/etat.haitien.aide@gmail.com"
+        method="POST"
+      >
+        <input type="hidden" name="_subject"
+          value="Nouvelle demande — Initiative privée d'entraide">
+        <input type="hidden" name="_template" value="table">
+
+        <label for="nom">Nom complet</label>
+        <input id="nom" name="Nom complet" type="text"
+          autocomplete="name" maxlength="100" required>
+
+        <label for="telephone">Numéro de téléphone</label>
+        <input id="telephone" name="Téléphone" type="tel"
+          autocomplete="tel" maxlength="25" required>
+
+        <label for="commune">Commune de résidence</label>
+        <input id="commune" name="Commune" type="text"
+          maxlength="100" required>
+
+        <label for="motif">Motif de la demande</label>
+        <select id="motif" name="Motif de la demande" required>
+          <option value="">Choisissez une option</option>
+          <option>Demande d'information</option>
+          <option>Demande d'assistance</option>
+          <option>Proposition de partenariat</option>
+          <option>Autre</option>
+        </select>
+
+        <label for="message">Message complémentaire (facultatif)</label>
+        <textarea id="message" name="Message"
+          rows="4" maxlength="1500"
+          placeholder="Expliquez brièvement votre demande."></textarea>
+
+        <div class="consent">
+          <input id="consentement" name="Consentement"
+            type="checkbox" value="Accepté" required>
+          <label for="consentement" style="margin:0;font-weight:normal">
+            J'accepte que les informations fournies soient utilisées
+            pour traiter ma demande et que l'organisation me contacte.
+          </label>
+        </div>
+
+        <button type="submit">Envoyer ma demande</button>
+      </form>
+
+      <p class="small">
+        N'indiquez pas de mot de passe, de coordonnées bancaires
+        ou de documents d'identité dans ce formulaire.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Transparence et sécurité</h2>
+      <p>
+        Ce site est géré par une organisation privée indépendante.
+        Il ne représente aucune institution publique et ne délivre
+        aucun document officiel de l'État.
+      </p>
+      <p>
+        Aucun paiement n'est nécessaire pour envoyer une demande.
+        Méfiez-vous de toute personne qui réclame de l'argent pour
+        débloquer une aide promise.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    © 2026 — Initiative privée d'entraide en Haïti.
+    Site indépendant, non gouvernemental.
+  </footer>
 </body>
 </html>
